@@ -27,23 +27,26 @@
 
 ## Chef develop cookbook
 
-resource :arrow_right: recipe :arrow_right: cookbook :arrow_right: app
+**resource**</br>
+**resource** :arrow_right: **recipe** :arrow_right: **cookbook** :arrow_right: **app**</br>
+**resource**</br>
 
 ```
-			 _____ type
-			| 
-			|----- name
+	     _____ type
+	    | 
+	    |----- name
 resource ---| 
-			|----- action
-			|_____ property
+	    |----- action
+	    |_____ property
 ```
 
-`$ chef generate app app_name`										# Generate an application repo.
-`$ chef generate cookbook cookbook_name` 							# Generate a single cookbook.
-`$ chef generate recipe [path/to/cookbook] recipe_name` 			# Generate a new recipe.
-`$ chef generate attribute [path/to/cookbook] attribute_file_name` 	# Generate an attributes file. 
-`$ chef generate template [path/to/cookbook] template_name` 		# Generate a file template.
-`$ chef-client --local-mode --override-runlist cookbook_name`		# Converge cookbook locally.
-`$ ruby -c my_cookbook_file.rb`										# Check ruby syntax.
-`$ foodcritic -P -f all your-cookbook`								# Check linting using foodcritic.
-`$ cookstyle your-cookbook`											# Check linting using cookstyle.
+* `$ chef generate app app_name`					# Generate an application repo.
+* `$ chef generate cookbook cookbook_name` 				# Generate a single cookbook.
+* `$ chef generate recipe [path/to/cookbook] recipe_name` 		# Generate a new recipe.
+* `$ chef generate attribute [path/to/cookbook] attribute_file_name` 	# Generate an attributes file. 
+* `$ chef generate template [path/to/cookbook] template_name` 		# Generate a file template.
+* `$ chef-client --local-mode --override-runlist cookbook_name`		# Converge cookbook locally.
+* `$ ruby -c my_cookbook_file.rb`					# Check ruby syntax.
+* `$ foodcritic -P -f all your-cookbook`			 	# Check linting using foodcritic.
+* `$ cookstyle your-cookbook`						# Check linting using cookstyle.
+
