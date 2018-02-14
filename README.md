@@ -4,6 +4,8 @@
 
 * [Setting Up Workstation Environment](#setting-up-workstation-environment)
 * [Chef develop cookbook](#chef-develop-cookbook)
+* [Syntax Checks](#syntax-checks)
+* [Working with community cookbooks](#working-with-community-cookbooks)
 
 
 ## Setting Up Workstation Environment
@@ -46,7 +48,18 @@ resource ---|
 * `$ chef generate attribute [path/to/cookbook] attribute_file_name` 	# Generate an attributes file. 
 * `$ chef generate template [path/to/cookbook] template_name` 		# Generate a file template.
 * `$ chef-client --local-mode --override-runlist cookbook_name`		# Converge cookbook locally.
+
+## Syntax Checks
+
 * `$ ruby -c my_cookbook_file.rb`					# Check ruby syntax.
 * `$ foodcritic -P -f all your-cookbook`			 	# Check linting using foodcritic.
 * `$ cookstyle your-cookbook`						# Check linting using cookstyle.
+
+## Working with community cookbooks
+
+* `$ berks install`             					# Download dependent community cookbooks.
+* `$ ls ~/.berkshelf/cookbooks/` 					# Local berkshelf cookbook directory.
+* `$ berks upload`				 			# Upload dependent cookbooks to chef server.
+* `$ cat Berksfile.lock`						# Currently using cookbooks and versions.
+
 
