@@ -6,6 +6,7 @@
 * [Chef develop cookbook](#chef-develop-cookbook)
 * [Syntax Checks](#syntax-checks)
 * [Working with community cookbooks](#working-with-community-cookbooks)
+* [Bootstraping a node](#bootstraping-a-node)
 
 
 ## Setting Up Workstation Environment
@@ -61,5 +62,10 @@ resource ---|
 * `$ ls ~/.berkshelf/cookbooks/` 					# Local berkshelf cookbook directory.
 * `$ berks upload`				 			# Upload dependent cookbooks to chef server.
 * `$ cat Berksfile.lock`						# Currently using cookbooks and versions.
+
+## Bootstraping a node
+
+* `$ knife bootstrap FQDN -x username -P password -i /path/to/identity_file -N name -r 'recipe[cookbook::recipe]' --sudo`      # Standard bootstrap.
+* `$ knife bootstrap localhost -p 2222 -x vagrant -i /Users/gsree/Documents/Vagrant/.vagrant/machines/default/virtualbox/private_key -N vagrant -r 'recipe[apache]' --sudo`       # Bootstrapping a vagrant vm.
 
 
